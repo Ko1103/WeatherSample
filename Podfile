@@ -8,7 +8,7 @@ target 'WeatherSample' do
   pod 'RxSwift' 
 	pod 'RxCocoa' 
 	pod 'RxBlocking'
-	pod 'Alamofire', '~> 3.0'
+	pod 'Alamofire'
 	pod 'RxAlamofire'
 
   target 'WeatherSampleTests' do
