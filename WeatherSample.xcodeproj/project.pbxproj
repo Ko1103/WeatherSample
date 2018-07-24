@@ -20,6 +20,7 @@
 		E65E2D6A2107597300EB134B /* Texts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E2D692107597300EB134B /* Texts.swift */; };
 		E65E2D6C210759F200EB134B /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E2D6B210759F200EB134B /* Weather.swift */; };
 		E65E2D6E21075AE300EB134B /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E2D6D21075AE300EB134B /* NSDate+Extensions.swift */; };
+		E65E2D7021075E4600EB134B /* String+percentEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E2D6F21075E4600EB134B /* String+percentEncoding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		E65E2D692107597300EB134B /* Texts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texts.swift; sourceTree = "<group>"; };
 		E65E2D6B210759F200EB134B /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E65E2D6D21075AE300EB134B /* NSDate+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
+		E65E2D6F21075E4600EB134B /* String+percentEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+percentEncoding.swift"; sourceTree = "<group>"; };
 		E798E2FCEB46B2BBF8D30EF6 /* Pods-WeatherSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherSample/Pods-WeatherSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				E65E2D692107597300EB134B /* Texts.swift */,
 				E65E2D6B210759F200EB134B /* Weather.swift */,
 				E65E2D6D21075AE300EB134B /* NSDate+Extensions.swift */,
+				E65E2D6F21075E4600EB134B /* String+percentEncoding.swift */,
 				E65E2D3D2107136400EB134B /* ViewController.swift */,
 				E65E2D3F2107136400EB134B /* Main.storyboard */,
 				E65E2D422107136500EB134B /* Assets.xcassets */,
@@ -393,6 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65E2D6E21075AE300EB134B /* NSDate+Extensions.swift in Sources */,
+				E65E2D7021075E4600EB134B /* String+percentEncoding.swift in Sources */,
 				E65E2D6C210759F200EB134B /* Weather.swift in Sources */,
 				E65E2D6A2107597300EB134B /* Texts.swift in Sources */,
 				E65E2D3E2107136400EB134B /* ViewController.swift in Sources */,
