@@ -5,10 +5,9 @@ target 'WeatherSample' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'RxSwift', '~> 2.0.0-beta'
-	pod 'RxCocoa', '~> 2.0.0-beta'
-	pod 'RxBlocking', '~> 2.0.0-beta'
-	pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  pod 'RxSwift' 
+	pod 'RxCocoa' 
+	pod 'RxBlocking'
 	pod 'Alamofire', '~> 3.0'
 	pod 'RxAlamofire'
 
