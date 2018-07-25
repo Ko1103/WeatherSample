@@ -9,7 +9,7 @@
 import Foundation
 
 struct Forecast: Codable {
-    let date: NSDate
+    let date: Date
     let imageID: String
     let temp: Float
     let description: String
@@ -17,7 +17,7 @@ struct Forecast: Codable {
 
 struct Weather: Codable {
     let cityName: String
-    let forecast: [Forecast]
+    let forecasts: [Forecast]
     
     var currentWeather: Forecast {
         return forecast[0]
