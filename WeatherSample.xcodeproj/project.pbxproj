@@ -25,6 +25,7 @@
 		E65E2D74210845C700EB134B /* Array+uniqueElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E2D73210845C700EB134B /* Array+uniqueElements.swift */; };
 		E65E2D762108474900EB134B /* WeatherBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E2D752108474900EB134B /* WeatherBackgroundImage.swift */; };
 		E65E2D78210848F600EB134B /* UIViewController+presentError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E2D77210848F600EB134B /* UIViewController+presentError.swift */; };
+		E65E2D7A210849EA00EB134B /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65E2D79210849EA00EB134B /* ForecastTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		E65E2D73210845C700EB134B /* Array+uniqueElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+uniqueElements.swift"; sourceTree = "<group>"; };
 		E65E2D752108474900EB134B /* WeatherBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBackgroundImage.swift; sourceTree = "<group>"; };
 		E65E2D77210848F600EB134B /* UIViewController+presentError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+presentError.swift"; sourceTree = "<group>"; };
+		E65E2D79210849EA00EB134B /* ForecastTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTableViewCell.swift; sourceTree = "<group>"; };
 		E798E2FCEB46B2BBF8D30EF6 /* Pods-WeatherSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeatherSample/Pods-WeatherSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				E65E2D3D2107136400EB134B /* ViewController.swift */,
 				E65E2D752108474900EB134B /* WeatherBackgroundImage.swift */,
 				E65E2D77210848F600EB134B /* UIViewController+presentError.swift */,
+				E65E2D79210849EA00EB134B /* ForecastTableViewCell.swift */,
 				E65E2D3F2107136400EB134B /* Main.storyboard */,
 				E65E2D422107136500EB134B /* Assets.xcassets */,
 				E65E2D442107136500EB134B /* LaunchScreen.storyboard */,
@@ -415,6 +418,7 @@
 				E65E2D6A2107597300EB134B /* Texts.swift in Sources */,
 				E65E2D762108474900EB134B /* WeatherBackgroundImage.swift in Sources */,
 				E65E2D722107701C00EB134B /* WeatherAPIService.swift in Sources */,
+				E65E2D7A210849EA00EB134B /* ForecastTableViewCell.swift in Sources */,
 				E65E2D3E2107136400EB134B /* ViewController.swift in Sources */,
 				E65E2D3C2107136400EB134B /* AppDelegate.swift in Sources */,
 			);
