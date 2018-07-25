@@ -37,14 +37,15 @@ class WeatherAPIService {
         let url = try! ResourcePath.forecast.path.asURL()
         let urlRequest = URLRequest(url: url.appendingPathComponent(ResourcePath.forecast.rawValue))
         let request = try! URLEncoding.default.encode(urlRequest, with: params)
-        
+        var result: Observable<Weather>!
         Alamofire.request(request).responseJSON { (response) in
             if let data = response.data {
                 let jsonDecoder = JSONDecoder()
                 let weather = try! jsonDecoder.decode(Weather.self, from: data)
-                return Observable.just(weather)
+                result = Observable.just(weather)
             }
         }
+        return result
     }
 }
 
