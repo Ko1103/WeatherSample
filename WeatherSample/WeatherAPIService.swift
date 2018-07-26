@@ -9,7 +9,6 @@
 import Foundation
 import Alamofire
 import RxSwift
-import RxCocoa
 import RxAlamofire
 
 class WeatherAPIService {
@@ -50,7 +49,7 @@ class WeatherAPIService {
     }
     
     func weatherImage(forID imageID: String) -> Observable<Data> {
-        return request(.get, method: ResourcePath.icon.path + imageID + ".png").rx_data()
+        return request(.get, ResourcePath.icon.path + imageID + ".png").data()
     }
 }
 
