@@ -20,7 +20,7 @@ struct Weather: Codable {
     let forecasts: [Forecast]
     
     var currentWeather: Forecast {
-        return forecast[0]
+        return forecasts[0]
     }
     
     

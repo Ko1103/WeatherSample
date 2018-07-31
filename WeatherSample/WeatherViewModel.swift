@@ -47,14 +47,18 @@ final class WeatherViewModel {
             .share(replay: 1)
         
         cityName = weather
-            .map{ $0.cityName ?? "" }
+            .map{ $0.cityName }
         temp = weather
             .map{ "\($0.currentWeather.temp)" }
         weatherDescription = weather
             .map{ $0.currentWeather.description }
         weatherImageData = weather
             .map{ $0.currentWeather.imageID }
-            .flatmap(weatherService.wea)
+            .flatMap(weatherService.weatherImage)
+        
+        weatherBackgroundImage = weather
+            .map{ $0.currentWeather.imageID }
+            .map{ return WeatherBackgroundImage(imageID: $0)! }
     }
     
     private func cells(from weather: Weather) -> [(day: String, forecasts: [ForecastModel])] {
