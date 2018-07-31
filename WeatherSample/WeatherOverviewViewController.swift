@@ -24,11 +24,23 @@ final class WeatherOverviewViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     @IBOutlet weak var forecastsTableView: UITableView!
+    @IBOutlet weak var cityTextField: UITextField!
+    
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var cityDegreesLabel: UILabel!
+    @IBOutlet weak var weatherMessageLabel: UILabel!
+    
+    @IBOutlet weak var weatherIconImageView: UIImageView!
+    @IBOutlet weak var weatherBackgroundImageView: UIImageView!
+    
+    ///table view header (current weather display)
+    @IBOutlet weak var weatherView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         forecastsTableView.delegate = self
         self.viewModel = WeatherViewModel(weatherService: WeatherAPIService())
+        self.addBindsToViewModel(viewModel: self.viewModel)
     }
     
     private var tableViewData: [(day: String, forecasts: [ForecastModel])]? {
@@ -36,6 +48,38 @@ final class WeatherOverviewViewController: UIViewController {
             // oldValueで変更前の値を取得することができる。
             self.forecastsTableView.reloadData()
         }
+    }
+    
+    private func addBindsToViewModel(viewModel: WeatherViewModel) {
+        self.cityTextField.rx.text.orEmpty
+            .bind(to: viewModel.searchText)
+            .disposed(by: self.disposeBag)
+        
+        viewModel.cityName
+            .bind(to: cityNameLabel.rx.text)
+            .disposed(by: self.disposeBag)
+        
+        viewModel.temp
+            .bind(to: cityDegreesLabel.rx.text)
+            .disposed(by: self.disposeBag)
+        
+        viewModel.weatherDescription
+            .bind(to: weatherMessageLabel.rx.text)
+            .disposed(by: self.disposeBag)
+        
+        viewModel.weatherImageData
+            .map(UIImage.init)
+            .bind(to: weatherIconImageView.rx.image)
+            .disposed(by: self.disposeBag)
+        
+        viewModel.weatherBackgroundImage
+            .map{ $0.image }
+            .bind(to: self.weatherBackgroundImageView.rx.image)
+            .disposed(by: self.disposeBag)
+        
+        viewModel.cellData
+            .bind(to: self.forecastsTableView.rx.items(dataSource: self))
+            .disposed(by: self.disposeBag)
     }
 }
 
